@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTheme } from "../contexts/ThemeContext";
@@ -56,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   const handleMouseLeave = () => {
     setHovering(false);
-    if (isOpen && !hovering) toggleSidebar();
+    if (isOpen) toggleSidebar();
   };
 
   return (
