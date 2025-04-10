@@ -29,6 +29,7 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 
+// Routes component must be inside the context providers
 const AppRoutes = () => {
   return (
     <Routes>
@@ -49,20 +50,23 @@ const AppRoutes = () => {
   );
 };
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+// Move the function component definition outside of the export
+function App() {
+  return (
+    <BrowserRouter>
       <ThemeProvider>
         <AuthProvider>
-          <BrowserRouter>
-            <AppRoutes />
-          </BrowserRouter>
-          <Toaster />
-          <Sonner />
+          <QueryClientProvider client={queryClient}>
+            <TooltipProvider>
+              <AppRoutes />
+              <Toaster />
+              <Sonner />
+            </TooltipProvider>
+          </QueryClientProvider>
         </AuthProvider>
       </ThemeProvider>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </BrowserRouter>
+  );
+}
 
 export default App;
