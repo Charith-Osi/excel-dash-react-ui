@@ -19,9 +19,9 @@ const Profile = () => {
 
         <div className="max-w-3xl bg-card p-6 rounded-lg shadow-sm">
           <div className="flex flex-col items-center mb-8">
-            <Avatar className="w-32 h-32 mb-4">
+            <Avatar className="w-32 h-32 mb-4 bg-purple-500">
               <AvatarImage src={user?.avatar || "/placeholder.svg"} alt="Profile" />
-              <AvatarFallback>{user?.name?.[0] || "U"}</AvatarFallback>
+              <AvatarFallback className="bg-purple-500 text-white">{user?.name?.[0] || "U"}</AvatarFallback>
             </Avatar>
             <h2 className="text-2xl font-bold">{user?.name || "User"}</h2>
             <p className="text-muted-foreground">{user?.email || "user@example.com"}</p>

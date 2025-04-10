@@ -18,14 +18,7 @@ const Dashboard = () => {
 
         <FileUpload />
 
-        <div className="mt-12">
-          <h2 className="text-xl font-semibold mb-4">Recent Uploads</h2>
-          <div className="bg-card rounded-lg shadow-sm overflow-hidden">
-            <div className="p-6 text-center text-muted-foreground">
-              No files have been uploaded yet.
-            </div>
-          </div>
-        </div>
+        {/* Recent Uploads section removed as requested */}
       </motion.div>
     </div>
   );
