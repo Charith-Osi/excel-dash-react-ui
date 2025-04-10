@@ -12,7 +12,6 @@ import Layout from "./components/Layout";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
-import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 import { useAuth } from "./contexts/AuthContext";
@@ -43,7 +42,6 @@ const AppRoutes = () => {
       }>
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="profile" element={<Profile />} />
-        <Route path="settings" element={<Settings />} />
       </Route>
       
       <Route path="*" element={<NotFound />} />

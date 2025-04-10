@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTheme } from "../contexts/ThemeContext";
 import { useAuth } from "../contexts/AuthContext";
-import { LayoutDashboard, User, Settings, LogOut, Sun, Moon } from "lucide-react";
+import { LayoutDashboard, User, LogOut, Sun, Moon } from "lucide-react";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -99,12 +99,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               text="Profile"
               isOpen={isOpen}
               to="/profile"
-            />
-            <SidebarItem
-              icon={<Settings size={20} />}
-              text="Settings"
-              isOpen={isOpen}
-              to="/settings"
             />
           </nav>
         </div>
